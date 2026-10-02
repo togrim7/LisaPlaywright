@@ -6,3 +6,11 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+.env
+.env.*
+node_modules
+dist
+coverage
+*.pem
+secrets.json
+config.json
