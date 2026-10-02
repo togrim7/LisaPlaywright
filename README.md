@@ -1,28 +1,36 @@
-# Playwright E2E Test Automation Suite
+# Lisa Playwright Tests
 
-This repository contains an end-to-end automated testing suite written with **Playwright** and **JavaScript**, targeting key user flows and web application functionalities.
+Automated end-to-end test suite for the **LISA (Lisa Intelligent Systems Architecture)** web application using Playwright.
 
-## 🧪 Included Test Scenarios
+## Overview
 
-The test suite covers core functional areas located in the `tests/` directory:
+This project contains automated UI and functional tests for the Lisa identity and authentication flow. The suite validates user access, required field handling, and core application navigation across several areas, including:
 
-* **`login.spec.js`** — Authentication flows, credential validations, and session handling.
-* **`main.spec.js`** — Primary dashboard UI verification and main application navigation.
-* **`users.spec.js`** — User administration, role validations, and data table interactions.
+- Login with valid credentials
+- Login with invalid credentials
+- Empty username and password validation
+- Logout flow
+- Dashboard access
+- Fleet reports
+- Fleet search
 
-## 🏗 Key Framework Highlights
+## Technologies
 
-* **Native Async Handling:** Uses standard `async/await` patterns alongside Playwright's auto-waiting features to ensure test stability.
-* **Declarative Assertions:** Leverages built-in `expect` matchers for precise state and visual outcome checks.
-* **Targeted UI Locators:** Uses resilient CSS, XPath, and attribute-based selectors for reliable element interactions.
+- **Playwright** — end-to-end testing framework
+- **Node.js** — JavaScript runtime
+- **dotenv** — environment variable configuration
 
-## 📁 Repository Structure
+## Project Structure
 
 ```text
-LisaPlaywright/
 ├── tests/
-│   ├── login.spec.js       # Authentication & login test cases
-│   ├── main.spec.js        # Main interface navigation & UI checks
-│   └── users.spec.js       # User management workflows
-├── playwright.config.js    # Browser runner & execution configurations
-└── package.json            # Node.js dependencies and script shortcuts
+│   ├── Dashboard.spec.js
+│   ├── FleetReports.spec.js
+│   ├── FleetSearch.spec.js
+│   └── Login.spec.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── .env
+├── README.md
+└── playwright.config.js
