@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test')
 const loginUrl = "https://test-identity.mylisa.aero/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dlisa_dev_webapp%26redirect_uri%3Dhttps%253A%252F%252Ftest.mylisa.aero%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520roles%2520identity.api%2520lisa.api%2520offline_access%26state%3D078c2c4c49e14560bcb3248841420023%26code_challenge%3DxrvWGBeHuiKqMzjRU9VdM3ZlR-e4WM-hd3vTH0cmCZQ%26code_challenge_method%3DS256%26response_mode%3Dquery";
 const username = "marko.jankovic@amrosinnovations.aero";
-const password = "markotest123"
+const password = process.env.TEST_PASSWORD
 
 test.beforeEach(async ({ page }) => {
     await page.goto(loginUrl);
